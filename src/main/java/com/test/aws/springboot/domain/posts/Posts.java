@@ -1,5 +1,6 @@
 package com.test.aws.springboot.domain.posts;
 
+import com.test.aws.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,7 +12,7 @@ import javax.persistence.*;
 // Table 과 링크될 클래스
 // 기본값으로 클래스의 Camelcase -> Underscore 네이밍으로 테이블 이름 매핑
 @Entity // JPA 어노테이션
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id
     // 스프링 부트 2.0 에서는 GenerationType.IDENTITY 옵션을 추가해야만 auto_increment
@@ -31,5 +32,10 @@ public class Posts {
         this.title = title;
         this.content = content;
         this.author = author;
+    }
+
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
     }
 }
