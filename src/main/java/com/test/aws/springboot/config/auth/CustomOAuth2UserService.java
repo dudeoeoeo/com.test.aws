@@ -22,19 +22,15 @@ import java.util.Collections;
 @Service
 public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequest, OAuth2User> {
 
-    @Autowired
-    private UserRepository userRepository;
-    @Autowired
+    private final UserRepository userRepository;
     private final HttpSession httpSession;
-//    private final UserRepository userRepository;
-//    private final HttpSession httpSession;
 
     @Override
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
         System.out.println("loadUser called");
-        //OAuth2UserService<OAuth2UserRequest, OAuth2User> delegate = new DefaultOAuth2UserService();
+        OAuth2UserService<OAuth2UserRequest, OAuth2User> delegate = new DefaultOAuth2UserService();
 
-        OAuth2UserService delegate = new DefaultOAuth2UserService();
+        //OAuth2UserService delegate = new DefaultOAuth2UserService();
         OAuth2User oAuth2User = delegate.loadUser(userRequest);
 
         // 현재 로그인 진행 중인 서비스 구분

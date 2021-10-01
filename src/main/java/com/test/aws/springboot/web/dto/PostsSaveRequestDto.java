@@ -27,4 +27,7 @@ public class PostsSaveRequestDto {
                 .author(author)
                 .build();
     }
+    public String toString() {
+        return "title: " + this.title + ", author: " + this.author + ", content: " + this.content;
+    }
 }
