@@ -17,7 +17,6 @@ public class LoginUserArgumentResolver implements HandlerMethodArgumentResolver 
 
     private final HttpSession httpSession;
 
-
     @Override
     // supportsParameter() 
     // 컨트롤러 메서드의 특정 파라미터를 지원하는 판단
