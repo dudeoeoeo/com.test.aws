@@ -20,7 +20,6 @@ import javax.servlet.http.HttpSession;
 public class IndexController {
 
     private final PostsService postsService;
-    private final HttpSession httpSession;
 
     // mustache 스타터가 컨트롤러에서 문자열을 반환할 때 경로와 확장자 지정
     // 기본 경로 src/main/resources/templates
