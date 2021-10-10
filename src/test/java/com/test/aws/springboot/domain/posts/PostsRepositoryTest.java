@@ -1,6 +1,5 @@
 package com.test.aws.springboot.domain.posts;
 
-import javafx.geometry.Pos;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
