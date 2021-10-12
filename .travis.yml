@@ -25,8 +25,8 @@ script: "./gradlew clean build"
 
 before_deploy:
   - mkdir -p deploy # deploy 디렉토리를 Travis CI 가 실행중인 위치에서 생성
-  - zip -r springboot-aws com.test.aws
-  - mv com.test.aws.zip deploy/com.test.aws.zip
+  - zip -r springboot-aws *
+  - mv springboot-aws.zip deploy/springboot-aws.zip
 
 deploy:
   - provider: s3
