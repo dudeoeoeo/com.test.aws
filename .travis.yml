@@ -21,7 +21,7 @@ script: "./gradlew clean build"
 
 # permission denied
 before_install:
-  - chmod +x gradlew
+  - chmod +x gradlew # install 전 미리 실행 권한 추가
 
 before_deploy:
   - zip -r com.test.aws
