@@ -24,7 +24,7 @@ before_install:
 script: "./gradlew clean build"
 
 before_deploy:
-  - zip -r com.test.aws ./*
+  - zip -r com.test.aws *
   - mkdir -p deploy # deploy 디렉토리를 Travis CI 가 실행중인 위치에서 생성
   - mv com.test.aws.zip deploy/com.test.aws.zip
 
