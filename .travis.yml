@@ -25,7 +25,7 @@ before_install:
 
 before_deploy:
   - chmod +x gradlew
-  - zip -r com.test.aws
+  - zip -r com.test.aws ./*
   - mkdir -p deploy # deploy 디렉토리를 Travis CI 가 실행중인 위치에서 생성
   - mv freelec-springboot2-webservice.zip deploy/freelec-springboot2-webservice.zip
 
