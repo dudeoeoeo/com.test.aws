@@ -1,0 +1,6 @@
+version: 0.0 # CodeDeploy version / 프로젝트 버전이 아니므로 0.0 외에 다른 버전을 사용하면 오류가 발생한다.
+os: linux
+files:
+  - source: / # CodeDeploy에서 전달해 준 파일 중 destination으로 이동시킬 대상을 지정한다.
+    destination: /home/ec2-user/app/step2/zip/ # source 에서 지정된 파일을 받을 위치, 이후 Jar를 실행하는 것 등은 여기에서 진행
+    overwrites: yes
